@@ -1,3 +1,6 @@
+// JavaScript Document Google
+
+
 // if (window.self === window.top) {
 //     document.body.innerText = 'This application is for use in the Salesforce Marketing Cloud Content Builder only!';;
 // }
@@ -18,7 +21,7 @@ let mapData = {
 };
 
 // let defaultContent = '<img width="100%" src="https://maps.googleapis.com/maps/api/staticmap?center=London,+UK&zoom=12&scale=1&size=600x300&maptype=roadmap&format=png&visual_refresh=true" alt="Google Map">';
-let defaultContent = '<img src="https://dj-gmaps-sfmc-content-nlock.herokuapp.com//dragIcon.png" style="display:block;margin-left:auto;margin-right:auto">';
+//let defaultContent = '<img src="https://dj-gmaps-sfmc-content-nlock.herokuapp.com//dragIcon.png" style="display:block;margin-left:auto;margin-right:auto">';
 
 let saveData = () => {
     // console.log('Saving data...');
@@ -35,14 +38,14 @@ let saveData = () => {
         let content = '<img width="' + mapData.mapWidth + '" src="https://maps.googleapis.com/maps/api/staticmap?center=' + mapData.mapCentre + '&zoom=' + mapData.mapZoom + '&scale=1&size=' + mapData.mapWidth + 'x' + mapData.mapHeight + '&maptype=roadmap&format=png&visual_refresh=true&&markers=size:mid%7Ccolor:' + mapData.mapMarker.color + '%7Clabel:%7C' + mapData.mapCentre + '" alt="Google Map">';
 
         //check for ampscript
-        if (content.search('%%') != -1) {
-            sdk.setSuperContent(defaultContent, (newSuperContent) => {});
+        //if (content.search('%%') != -1) {
+       //     sdk.setSuperContent(defaultContent, (newSuperContent) => {});
             // content = defaultContent;
-        }
+      //  }
         sdk.setContent(content);
     });
 
-    console.log(JSON.stringify(mapData));
+    //console.log(JSON.stringify(mapData));
 }
 
 let fetchData = () => {
@@ -62,7 +65,7 @@ let fetchData = () => {
         }
     });
 
-    console.log(JSON.stringify(mapData));
+  //  console.log(JSON.stringify(mapData));
 }
 
 // sdk.setContent(defaultContent);
