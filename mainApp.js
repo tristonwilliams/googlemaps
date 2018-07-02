@@ -54,7 +54,7 @@ let fetchData = () => {
 
     sdk.getData((data) => {
         if (Object.keys(data).length > 0) {
-            mapData = data;
+          //  mapData = data;
             // document.getElementById('apiKey').value = mapData.apiKey;
             document.getElementById('mapWidth').value = mapData.mapWidth;
             document.getElementById('mapHeight').value = mapData.mapHeight;
