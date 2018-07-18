@@ -56,6 +56,8 @@ let fetchData = () => {
         if (Object.keys(data).length > 0) {
           //  mapData = data;
             // document.getElementById('apiKey').value = mapData.apiKey;
+            
+            Alert(mapData.Centre);
             document.getElementById('mapWidth').value = mapData.mapWidth;
             document.getElementById('mapHeight').value = mapData.mapHeight;
             document.getElementById('mapCentre').value = mapData.mapCentre;
